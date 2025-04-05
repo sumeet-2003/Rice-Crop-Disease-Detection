@@ -7,7 +7,7 @@ from PIL import Image
 app = Flask(__name__)
 
 # Load the model
-model_path = 'D://RiceCrop_DS/samplepredict.h5'  # Replace with the path to your model
+model_path = 'D://RiceCrop_DS/model/samplepredict.h5'  # Replace with the path to your model
 model = load_model(model_path)
 
 # Define your classes
