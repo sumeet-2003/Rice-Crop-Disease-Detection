@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Articles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/img/bgg.jpeg') ;
+            position: relative;
+            background-size: cover;
+            align-items: center;
+            background-attachment: fixed;
+        }
+        h1{
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+        }
+        .box{
+            left: 23%;
+            position: relative;
+            height: 30rem;
+            width: 50rem;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            height: 25rem;
+            width: 50rem;
+            background-color: #ffffffad;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+            margin-bottom: 2rem;
+        }
+        img{
+            height: 130px;
+            width: 130px;
+            margin: 10px;
+            margin-left: 95px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .navbar-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #81ff47;
+            margin-left: -67rem;
+        }
+
+        .navbar-buttons {
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .navbar-button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #38b000;
+            color: white;
+            cursor: pointer;
+            margin-right: 20px;
+            height:2rem;
+            width: 5rem;
+        }
+
+        .navbar-button:hover {
+            background-color: #ffaf01;
+        }
+        a{
+            text-decoration: none;
+            color:#81ff47;
+        }
+        .btn{
+            color: black;
+            background-color: #38b000;
+            margin: 10px;
+            margin-left: 22.7rem;
+            height: 2rem;
+            width: 5rem;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <img src="/static/img/logoo.png" alt="" style="height: 50px; width: 50px; margin-left: 1rem;">
+            <div class="navbar-title"><a href="/">AgroGuard</a></div>
+            <div class="navbar-buttons">
+                <a href="/info"><button class="navbar-button">Article</button></a>
+                <a href="/ab"><button class="navbar-button">About</button></a>
+            </div>
+        </div>
+    </nav>
+    <h1>Information About Rice Crop Diseases</h1>
+    <div class="box">
+        <div class="card">
+            <h2 style="text-align: center;">Introduction</h2>
+            <!-- <img src="{{ url_for('static', filename='images/Hispa_1034.jpg') }}" alt="Your Image"> -->
+            <p>Rice crops are susceptible to a range of diseases, each posing significant threats to yield and quality. These diseases manifest through symptoms like lesions on leaves, stunted growth, and discoloration, leading to diminished yields and compromised grain quality. Employing effective management strategies such as crop rotation, resistant varieties, and timely application of interventions is essential to mitigate their impact on rice production and safeguard food security.</p>
+            <img src="/static/img/SRI-hybrid-rice-field.jpg" alt="hispa">
+            <img src="/static/img/Rice Mobile banner.png" alt="leafblast">
+            <img src="/static/img/rice-02-1.jpg" alt="Leafblast">
+        </div>
+        <div class="card">
+            <h2 style="text-align: center;">Brown Spot</h2>
+            <p>Brown spot, caused by the fungus Cochliobolus miyabeanus, is a common disease affecting rice crops worldwide. It appears as small, dark brown lesions on leaves, which can coalesce and form larger spots under favorable conditions. Brown spot can reduce photosynthetic activity, weaken plants, and lead to yield losses. Implementing cultural practices, such as balanced fertilization and proper water management, along with fungicide applications, can help manage brown spot and protect rice yields.</p>
+            <img src="/static/img/BrownSpot_374.jpg" alt="">
+            <img src="/static/img/BrownSpot_431.jpg" alt="">
+            <img src="/static/img/BrownSpot_65.jpg" alt="">
+            <button class="btn"><a target="_blank" href="https://openinapp.link/k0bz0">View More</a></button>
+        </div>
+        <div class="card">
+            <h2 style="text-align: center;">Leaf Blast</h2>
+            <p>Leaf blast, caused by the fungus Magnaporthe oryzae, is a devastating disease affecting rice crops globally. It manifests as white to grayish lesions on leaves, stems, and panicles, ultimately leading to yield losses. Severe outbreaks can cause extensive crop damage, affecting grain quality and compromising food security. Effective management strategies, such as planting resistant varieties and timely fungicide applications, are crucial for controlling leaf blast and minimizing its impact on rice production.</p>
+            <img src="/static/img/LeafBlast_774.jpg" alt="">
+            <img src="/static/img/LeafBlast_81.jpg" alt="">
+            <img src="/static/img/LeafBlast_886.jpg" alt="">
+            <button class="btn"><a target="_blank" href="https://openinapp.link/qgz5u">View More</a></button>
+        </div>
+        <div class="card">
+            <h2 style="text-align: center;">Hispa</h2>
+            <p>Hispa, or rice hispa, is a destructive beetle pest targeting rice crops in Asia. Its adults feed on leaves, creating characteristic shot-hole patterns, while larvae bore into stems, causing wilting and lodging. This infestation weakens plants and reduces yields. Integrated pest management strategies, including biological control and field hygiene practices, are essential for mitigating Hispa's impact on rice cultivation and safeguarding crop productivity.</p>
+            <img src="/static/img/Hispa_1034.jpg" alt="">
+            <img src="/static/img/Hispa_474.jpg" alt="">
+            <img src="/static/img/Hispa_75.jpg" alt="">
+            <button class="btn"><a target="_blank" href="https://openinapp.link/9i7n1">View More</a></button>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

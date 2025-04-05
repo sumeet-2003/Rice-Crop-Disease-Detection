@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/img/bgg.jpeg');
+            position: relative;
+            background-size: cover;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 70px;
+            font-size: 2.5rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #363636;
+            background-color: #38b000;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .navbar-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #81ff47;
+            margin-left: -77rem;
+        }
+
+        .navbar-buttons {
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .navbar-button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #38b000;
+            color: white;
+            cursor: pointer;
+            margin-right: 20px;
+            height: 2rem;
+            width: 5rem;
+        }
+
+        .navbar-button:hover {
+            background-color: #ffaf01;
+        }
+
+        a {
+            text-decoration: none;
+            color: #81ff47;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <img src="/static/img/logoo.png" alt="" style="height: 50px; width: 50px; margin-left: 1rem;">
+            <div class="navbar-title"><a href="/">AgroGuard</a></div>
+            <div class="navbar-buttons">
+                <a href="/info"><button class="navbar-button">Article</button></a>
+                <a href="/ab"><button class="navbar-button">About</button></a>
+            </div>
+        </div>
+    </nav>
+    <h1>Rice Crop Disease Detection</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="imagefile"><br><br>
+        <input type="submit" class="btn" value="Upload">
+    </form>
+    <div id="prediction_result" style="font-size: 20px; text-align: center; font-weight: bold">
+        {% if predicted_class %}
+            <h2>Prediction:</h2>
+            <p>{{ predicted_class }}: {{ predicted_percentage }}%</p>
+
+            {% if predicted_class == "Hispa" %}
+                <!-- <h3>Hispa</h3>
+                <p><strong>Causes:</strong> Hispa is a common pest in rice crops. The larvae and adults feed on the leaves, causing characteristic shot-hole damage.</p>
+                <p><strong>Prevention Measures:</strong> Use insecticides approved for rice crops. Implement cultural practices such as maintaining proper field hygiene and planting resistant rice varieties.</p> -->
+            {% elif predicted_class == "Brown Spot" %}
+                <!-- <h3>Brown Spot</h3>
+                <p><strong>Causes:</strong> Brown spot is a fungal disease caused by the pathogen Bipolaris oryzae. It thrives in warm and humid conditions, often appearing during periods of high rainfall.</p>
+                <p><strong>Prevention Measures:</strong> Use fungicides recommended for controlling brown spot. Ensure proper drainage and avoid waterlogging in the fields. Practice crop rotation and maintain proper field hygiene.</p> -->
+            {% elif predicted_class == "Leaf Blast" %}
+                <!-- <h3>Leaf Blast</h3>
+                <p><strong>Causes:</strong> Leaf blast is a fungal disease caused by the pathogen Pyricularia oryzae. It affects leaves, leaf sheaths, nodes, and panicles, leading to significant yield losses.</p>
+                <p><strong>Prevention Measures:</strong> Use resistant rice varieties if available. Apply fungicides preventively before symptoms appear. Maintain proper field drainage and avoid excessive nitrogen fertilization.</p> -->
+            {% endif %}
+        {% endif %}
+    </div><br>
+
+    <div style="text-align: center;">
+        <a href="/info" style="text-decoration: none; color: rgb(0, 0, 0); font-weight: 600;">
+            Click here to see an Article on the causes and prevention of the disease <br><br>
+            <div class="btn" style="margin-right: 43rem; margin-left: 43rem;">
+                View Articles
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>

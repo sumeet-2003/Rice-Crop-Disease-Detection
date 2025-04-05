@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/img/bgg.jpeg') ;
+            position: relative;
+            background-size: cover;
+            align-items: center;
+            background-attachment: fixed;
+        }
+        .box{
+            left: 23%;
+            position: relative;
+            height: 30rem;
+            width: 50rem;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            height: 12rem;
+            width: 50rem;
+            background-color: #ffffffad;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            /* align-items: center; */
+        }
+        .card2{
+            height: 40rem;
+            width: 50rem;
+            background-color: #ffffffad;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            margin-top: -15rem;
+            /* align-items: center; */
+        }
+        .card3{
+            height: 40rem;
+            width: 50rem;
+            background-color: #ffffffad;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            margin-top: 15rem;
+            /* align-items: center; */
+        }
+        h1{
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .navbar-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #81ff47;
+            margin-left: -75rem;
+        }
+
+        .navbar-buttons {
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .navbar-button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #38b000;
+            color: white;
+            cursor: pointer;
+            margin-right: 20px;
+            height:2rem;
+            width: 5rem;
+        }
+
+        .navbar-button:hover {
+            background-color: #ffaf01;
+        }
+        a{
+            text-decoration: none;
+            color:#81ff47;
+        }
+        .graph{
+            height: 25rem;
+            width: 40rem;
+            margin-left: 5rem;
+            margin-top: 2rem;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <img src="/static/img/logoo.png" alt="" style="height: 50px; width: 50px; margin-left: 1rem;">
+            <div class="navbar-title"><a href="/">AgroGuard</a></div>
+            <div class="navbar-buttons">
+                <a href="/info"><button class="navbar-button">Article</button></a>
+                <a href="/ab"><button class="navbar-button">About</button></a>
+            </div>
+        </div>
+    </nav>
+    <h1>About</h1>
+    <div class="box">
+        <div class="card">
+            <p style=" text-align: justify;padding-top: 1rem;">We're dedicated to merging advanced agricultural techniques with machine learning to revolutionize rice crop disease detection. Our research focuses on combating prevalent threats like Brown Spot, Leaf Blast, and Hispa, which significantly impact rice yields. By combining the analytical power of machine learning with agricultural expertise, we've developed a robust framework. Our user-friendly web application incorporates a machine learning model to swiftly identify diseases and provide tailored solutions. This empowers farmers with the tools needed to mitigate crop losses and enhance economic returns. Our mission is to support sustainable farming practices globally, ensuring farmers have the resources to safeguard their crops effectively.</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="card2">
+            <img class="graph" src="../static/img/graph.png" alt="Graph"><br><br>
+            <p style="margin: 20px; text-align: justify;">This bar graph presents a comparative analysis of different deep learning models based on their performance. The models included are DenseNet121, EfficientNetB1, EfficientNetB0, Resnet50, MobileNetV2, VGG16, and VGG19. Among these, VGG16 and VGG19 exhibit the highest performance values, indicating their superior capabilities in the evaluated task. MobileNetV2 also shows strong performance, followed closely by EfficientNetB1 and EfficientNetB0. Resnet50 demonstrates moderate performance, while DenseNet121 shows the lowest performance among the models compared. This graph highlights the varying efficiencies of these models, which can guide the selection of an appropriate model based on the specific requirements and constraints of a given application.</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="card3">
+            <img class="graph" src="../static/img/conf-matrix.png" alt="matrix"><br><br>
+            <p style="margin: 20px; text-align: justify;">This confusion matrix shows the performance of the VGG16 model in classifying four categories: brownspot, healthy, hispa, and leafblast. The diagonal elements represent the correctly classified instances: 3 brownspot, 3 healthy, 1 hispa, and 2 leafblast. The off-diagonal elements show misclassifications. Notably, there is some confusion between hispa and leafblast, with 1 hispa instance misclassified as leafblast and vice versa. The model accurately classifies brownspot and healthy categories, with no misclassifications in these categories. Overall, the matrix indicates that while VGG16 performs well, there is room for improvement in distinguishing between similar categories like hispa and leafblast.</p>
+        </div>
+    </div>
+</body>
+</html>
